@@ -119,7 +119,7 @@ class Coffee(QMainWindow, Ui_MainWindow):
         super().__init__()
         self.setupUi(self)
 
-        self.con = sqlite3.connect('coffee.sqlite')
+        self.con = sqlite3.connect('data\coffee.sqlite')
         self.cur = self.con.cursor()
 
         self.pushButton.clicked.connect(self.update_base)
@@ -161,7 +161,7 @@ class EditCoffee(QMainWindow, Ui_AddWindow):
         super().__init__()
         self.setupUi(self)
 
-        self.con = sqlite3.connect('coffee.sqlite')
+        self.con = sqlite3.connect('data\coffee.sqlite')
         self.cur = self.con.cursor()
 
         self.button_add.clicked.connect(self.add_item)
